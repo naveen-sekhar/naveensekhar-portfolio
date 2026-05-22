@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { Heart, ArrowUp, GitBranch, Link as LinkIcon, Globe } from 'lucide-react';
+import { Heart, ArrowUp, GitBranch, Link as LinkIcon, Globe, Code2, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import profile from '../data/profile';
 
-const socialIconMap = { Github: GitBranch, Linkedin: LinkIcon, Twitter: Globe };
+const socialIconMap = { Github: GitBranch, Linkedin: LinkIcon, LeetCode: Code2, Email: Mail, Twitter: Globe };
 
 const quickLinks = [
   { name: 'Home', path: '/' },
@@ -48,11 +48,11 @@ export default function Footer() {
             {/* Brand / Tagline */}
             <motion.div variants={itemVariants} className="space-y-4">
               <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white text-sm font-bold shadow-lg shadow-blue-500/20">
-                AM
+                NS
               </span>
               <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-                {profile.subtitle}. Crafting pixel-perfect interfaces with
-                modern technologies and a passion for clean code.
+                {profile.subtitle}. Building secure systems, thoughtful interfaces,
+                and practical digital experiences.
               </p>
               <p className="text-gray-500 text-xs flex items-center gap-1.5">
                 Made with{' '}

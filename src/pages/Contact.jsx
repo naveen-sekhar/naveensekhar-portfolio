@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion';
 import {
   Mail,
-  Phone,
   MapPin,
   GitBranch,
   Code2,
   Link,
   Globe,
-  Clock,
 } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 import SectionHeader from '../components/SectionHeader';
@@ -34,15 +32,17 @@ const itemVariants = {
 const socialIconMap = {
   Github: GitBranch,
   Linkedin: Link,
+  LeetCode: Code2,
+  Email: Mail,
   Twitter: Globe,
 };
 
 const contactInfo = [
   { icon: Mail, label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
-  { icon: Phone, label: 'Phone', value: profile.phone, href: `tel:${profile.phone}` },
   { icon: MapPin, label: 'Location', value: profile.location, href: null },
-  { icon: GitBranch, label: 'GitHub Profile', value: 'github.com/alexmorgan', href: 'https://github.com/alexmorgan' },
-  { icon: Code2, label: 'LeetCode Profile', value: 'leetcode.com/u/alexmorgan', href: 'https://leetcode.com/u/alexmorgan' },
+  { icon: Link, label: 'LinkedIn Profile', value: 'linkedin.com/in/naveensekhar6', href: 'https://www.linkedin.com/in/naveensekhar6/' },
+  { icon: GitBranch, label: 'GitHub Profile', value: 'github.com/naveensekhar6', href: 'https://github.com/naveensekhar6' },
+  { icon: Code2, label: 'LeetCode Profile', value: 'leetcode.com/u/naveensekhar6', href: 'https://leetcode.com/u/naveensekhar6/' },
 ];
 
 export default function Contact() {
@@ -51,7 +51,7 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <SectionHeader
           title="Get In Touch"
-          subtitle="I'd love to hear from you. Let's build something great together."
+          subtitle="Open to internships, security projects, and meaningful collaborations."
           align="center"
         />
 

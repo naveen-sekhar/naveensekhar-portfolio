@@ -78,7 +78,7 @@ export default function Navbar() {
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white text-sm font-bold shadow-lg shadow-blue-500/20 select-none"
             >
-              AM
+              NS
             </motion.span>
           </NavLink>
 

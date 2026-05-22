@@ -23,9 +23,9 @@ const itemVariants = {
 };
 
 const summaryData = [
-  { icon: Calendar, label: 'Years of Experience', value: '4+', color: 'from-blue-500 to-cyan-500' },
-  { icon: Building2, label: 'Companies', value: '4', color: 'from-blue-500 to-cyan-500' },
-  { icon: TrendingUp, label: 'Projects Delivered', value: '30+', color: 'from-cyan-500 to-sky-500' },
+  { icon: Calendar, label: 'Years of Study', value: '3+', color: 'from-blue-500 to-cyan-500' },
+  { icon: Building2, label: 'Work Placements', value: '1', color: 'from-blue-500 to-cyan-500' },
+  { icon: TrendingUp, label: 'Security Focus Areas', value: '4+', color: 'from-cyan-500 to-sky-500' },
 ];
 
 function ExperienceCard({ item, index }) {
@@ -150,7 +150,7 @@ export default function Experience() {
         {/* Page Header */}
         <SectionHeader
           title="Experience"
-          subtitle="My professional journey and career highlights"
+          subtitle="Hands-on security work, internships, and practical learning experiences"
           align="center"
         />
 

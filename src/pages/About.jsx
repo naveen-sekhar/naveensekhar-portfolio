@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Calendar, ExternalLink } from 'lucide-react';
+import { MapPin, Mail, Calendar, GitBranch, Link as LinkIcon, Code2 } from 'lucide-react';
 
 import PageTransition from '../components/PageTransition';
 import SectionHeader from '../components/SectionHeader';
@@ -51,6 +51,12 @@ const educationItems = education.map((e) => ({
   details: e.achievements,
 }));
 
+const socialIconMap = {
+  Github: GitBranch,
+  Linkedin: LinkIcon,
+  LeetCode: Code2,
+};
+
 export default function About() {
   return (
     <PageTransition>
@@ -63,7 +69,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             title="About Me"
-            subtitle="A little more about who I am and what I do"
+            subtitle="A little more about my cybersecurity and IoT journey"
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
@@ -116,12 +122,7 @@ export default function About() {
                 variants={staggerItem}
                 className="grid grid-cols-2 gap-3"
               >
-                {[
-                  { label: 'Availability', value: profile.availability },
-                  { label: 'Experience', value: `${profile.stats[0].value}+ Years` },
-                  { label: 'Projects', value: `${profile.stats[1].value}+` },
-                  { label: 'Location', value: profile.location },
-                ].map((detail) => (
+                {profile.stats.map((detail) => (
                   <div
                     key={detail.label}
                     className="bg-white/5 border border-white/10 rounded-xl p-3"
@@ -141,7 +142,9 @@ export default function About() {
                 variants={staggerItem}
                 className="flex gap-3 pt-2"
               >
-                {profile.socialLinks.map((social) => (
+                {profile.socialLinks.map((social) => {
+                  const IconComponent = socialIconMap[social.icon];
+                  return (
                   <motion.a
                     key={social.name}
                     href={social.url}
@@ -151,9 +154,10 @@ export default function About() {
                     whileTap={{ scale: 0.95 }}
                     className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/30 hover:bg-blue-500/10 transition-all duration-300"
                   >
-                    <ExternalLink size={16} />
+                    {IconComponent ? <IconComponent size={16} /> : <Mail size={16} />}
                   </motion.a>
-                ))}
+                  );
+                })}
               </motion.div>
             </motion.div>
 
@@ -200,21 +204,21 @@ export default function About() {
                     transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                     className="absolute top-4 left-4 px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-[10px] font-mono text-blue-300"
                   >
-                    {'<React />'}
+                    {'<IoT />'}
                   </motion.div>
                   <motion.div
                     animate={{ y: [0, 6, 0] }}
                     transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
                     className="absolute bottom-4 right-4 px-2 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-[10px] font-mono text-cyan-300"
                   >
-                    {'node.js'}
+                    {'Linux'}
                   </motion.div>
                   <motion.div
                     animate={{ y: [0, -6, 0] }}
                     transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
                     className="absolute top-4 right-4 px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-[10px] font-mono text-blue-300"
                   >
-                    {'TypeScript'}
+                    {'Security'}
                   </motion.div>
                 </div>
               </div>

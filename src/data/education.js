@@ -1,44 +1,51 @@
 const education = [
   {
     id: 1,
-    institution: 'University of California, Berkeley',
-    degree: 'B.S. in Computer Science',
-    duration: '2018 - 2022',
+    institution: 'Sri Ramachandra Institute Of Higher Education and Research',
+    degree: 'Bachelor of Technology, Computer Science Engineering',
+    duration: '2023 - 2027',
     description:
-      'Graduated with honors with a focus on Software Engineering and Human-Computer Interaction. Active member of the university hackathon club and an undergraduate teaching assistant for the introductory web development course.',
+      'Studying core computer science fundamentals with a growing focus on cybersecurity, IoT systems, networking, and practical engineering projects.',
     achievements: [
-      "Dean's List — All semesters",
-      'GPA: 3.8 / 4.0',
-      'Senior Thesis: "Optimizing Real-Time Collaboration in Distributed Web Applications"',
-      'Teaching Assistant for CS 160: User Interface Design and Development',
+      'Cybersecurity and IoT focused hands-on learning',
+      'Building projects around secure systems and connected devices',
+      'Active interest in Linux, penetration testing, and network defense',
     ],
   },
   {
     id: 2,
-    institution: 'freeCodeCamp & Coursera',
-    degree: 'Full Stack Web Development Program',
-    duration: '2020 - 2021',
+    institution: 'Montfort Matric Higher Secondary School Tindivanam',
+    degree: 'Higher Secondary Education (HSC), Mathematics and Computer Science',
+    duration: 'Jun 2021 - Jun 2023',
     description:
-      'Completed over 1,200 hours of intensive, project-based coursework covering the MERN stack, responsive web design, data structures, and algorithms. Built 20+ projects as part of the certification curriculum.',
+      'Completed higher secondary education with a focus on mathematics and computer science, forming the foundation for later technical studies.',
     achievements: [
-      'Responsive Web Design Certification',
-      'JavaScript Algorithms & Data Structures Certification',
-      'Front End Development Libraries Certification',
-      'APIs and Microservices Certification',
+      'Mathematics and Computer Science track',
+      'Strong base in analytical and technical problem solving',
     ],
   },
   {
     id: 3,
-    institution: 'Lincoln High School',
-    degree: 'High School Diploma — STEM Track',
-    duration: '2014 - 2018',
+    institution: 'Prasan Vidya Mandir',
+    degree: 'Secondary Education',
+    duration: 'Jun 2016 - Jun 2021',
     description:
-      'Graduated valedictorian with a concentration in Science and Technology. Founded the school\'s first Computer Science Club and led the team to a regional competition win.',
+      'Built a strong academic foundation through secondary education and developed an early interest in science, technology, and structured learning.',
     achievements: [
-      'Valedictorian — Class of 2018',
-      'Founded the Computer Science Club',
-      'AP Computer Science A — Score: 5',
-      '1st Place, Regional Science & Technology Fair',
+      'Consistent interest in science and technology subjects',
+      'Developed early study habits and technical curiosity',
+    ],
+  },
+  {
+    id: 4,
+    institution: 'Sri Sankara Vidyalaya Matriculation Higher Secondary School',
+    degree: 'Primary Education',
+    duration: 'Foundation Years',
+    description:
+      'Completed primary education and built the earliest foundations for communication, discipline, and learning.',
+    achievements: [
+      'Primary education foundation',
+      'Early academic development',
     ],
   },
 ];

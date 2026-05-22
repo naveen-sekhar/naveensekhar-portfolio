@@ -8,28 +8,25 @@ import Modal from '../components/ui/Modal';
 import Button from '../components/ui/Button';
 import certifications from '../data/certifications';
 
-const categories = ['all', 'cloud', 'web', 'security', 'data'];
+const categories = ['all', 'security', 'data', 'systems'];
 
 const categoryLabels = {
   all: 'All',
-  cloud: 'Cloud',
-  web: 'Web',
   security: 'Security',
   data: 'Data',
+  systems: 'Systems',
 };
 
 const categoryColors = {
-  cloud: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
-  web: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
   security: 'bg-red-500/20 text-red-300 border-red-500/30',
   data: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
+  systems: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
 };
 
 const categoryIcons = {
-  cloud: Shield,
-  web: BookOpen,
   security: Shield,
   data: BookOpen,
+  systems: Award,
 };
 
 const containerVariants = {
@@ -75,7 +72,7 @@ export default function Certifications() {
         {/* Header */}
         <SectionHeader
           title="Certifications"
-          subtitle="Industry-recognized credentials that validate deep technical expertise."
+          subtitle="Credentials and learning paths aligned with security, data, and enterprise systems."
         />
 
         {/* Category Filter */}

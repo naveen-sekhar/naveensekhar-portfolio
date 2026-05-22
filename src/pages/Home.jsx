@@ -120,7 +120,7 @@ export default function Home() {
               <motion.div variants={heroChild} className="inline-flex">
                 <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm font-mono shadow-lg shadow-blue-500/5">
                   <Code2 size={14} className="text-blue-400" />
-                  Portfolio / Live Experience
+                  Cybersecurity / IoT Portfolio
                 </span>
               </motion.div>
 
@@ -155,8 +155,8 @@ export default function Home() {
                   variants={heroChild}
                   className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl"
                 >
-                  {profile.subtitle}. I design and build focused web products with
-                  a sharp visual rhythm, clean motion, and practical engineering.
+                  {profile.subtitle}. I focus on ethical hacking, vulnerability
+                  assessment, IoT ecosystems, and secure network architecture.
                 </motion.p>
               </div>
 
@@ -181,9 +181,9 @@ export default function Home() {
                 className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl"
               >
                 {[
-                  'Frontend craft',
-                  'Backend logic',
-                  'Motion-driven UI',
+                  'Red teaming',
+                  'IoT security',
+                  'Linux + databases',
                 ].map((item) => (
                   <div
                     key={item}
