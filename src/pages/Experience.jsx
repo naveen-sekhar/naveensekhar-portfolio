@@ -22,11 +22,11 @@ const itemVariants = {
   },
 };
 
-const summaryData = [
-  { icon: Calendar, label: 'Years of Study', value: '3+', color: 'from-blue-500 to-cyan-500' },
-  { icon: Building2, label: 'Work Placements', value: '1', color: 'from-blue-500 to-cyan-500' },
-  { icon: TrendingUp, label: 'Security Focus Areas', value: '4+', color: 'from-cyan-500 to-sky-500' },
-];
+// const summaryData = [
+//   { icon: Calendar, label: 'Years of Study', value: '3+', color: 'from-blue-500 to-cyan-500' },
+//   { icon: Building2, label: 'Work Placements', value: '3', color: 'from-blue-500 to-cyan-500' },
+//   { icon: TrendingUp, label: 'Security Focus Areas', value: '4+', color: 'from-cyan-500 to-sky-500' },
+// ];
 
 function ExperienceCard({ item, index }) {
   const [expanded, setExpanded] = useState(false);
@@ -162,7 +162,7 @@ export default function Experience() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {summaryData.map((stat, index) => (
+          {/* {summaryData.map((stat, index) => (
             <motion.div
               key={stat.label}
               variants={itemVariants}
@@ -183,7 +183,7 @@ export default function Experience() {
               </motion.p>
               <p className="text-gray-400 text-sm">{stat.label}</p>
             </motion.div>
-          ))}
+          ))} */}
         </motion.div>
 
         {/* Experience Timeline */}
