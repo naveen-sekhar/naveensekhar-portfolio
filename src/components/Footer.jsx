@@ -8,7 +8,8 @@ const socialIconMap = { Github: GitBranch, Linkedin: LinkIcon, LeetCode: Code2, 
 const quickLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
-  { name: 'Projects', path: '/projects' },
+  { name: 'Project Works', path: '/project-works' },
+  { name: 'Responsibilities', path: '/responsibilities' },
   { name: 'Experience', path: '/experience' },
   { name: 'Contact', path: '/contact' },
 ];
