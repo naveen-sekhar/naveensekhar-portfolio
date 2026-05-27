@@ -19,6 +19,6 @@ npm run build
 
 The app is configured for the `/naveensekhar-portfolio/` GitHub Pages subpath in `vite.config.js`.
 
-Pushes to `main` automatically build the site and publish the `dist/` folder through `.github/workflows/deploy.yml`.
+Pushes to `main` automatically build the site and publish the `dist/` folder through `.github/workflows/deploy.yml` using GitHub Actions Pages deployment.
 
-In GitHub repository settings, make sure Pages is set to deploy from the `gh-pages` branch root.
+In GitHub repository settings, make sure Pages is set to deploy from GitHub Actions.
