@@ -22,3 +22,5 @@ The app is configured for the `/naveensekhar-portfolio/` GitHub Pages subpath in
 Pushes to `main` automatically build the site and publish the `dist/` folder through `.github/workflows/deploy.yml` using GitHub Actions Pages deployment.
 
 In GitHub repository settings, make sure Pages is set to deploy from GitHub Actions.
+
+To keep direct refreshes working on nested routes like `/competitions`, the app uses a GitHub Pages SPA fallback in `public/404.html` that redirects back to the root and restores the requested path in `index.html`.

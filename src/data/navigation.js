@@ -4,7 +4,6 @@ const navigation = [
   { name: 'Experience', path: '/experience', icon: 'Briefcase' },
   { name: 'Competitions', path: '/competitions', icon: 'Trophy' },
   { name: 'Certifications', path: '/certifications', icon: 'Award' },
-  { name: 'Contributions', path: '/contributions', icon: 'GitBranch' },
   { name: 'Contact', path: '/contact', icon: 'Mail' },
 ];
 

@@ -9,7 +9,6 @@ import {
   Briefcase,
   Trophy,
   Award,
-  GitBranch,
   Mail,
 } from 'lucide-react';
 
@@ -78,13 +77,6 @@ const quickLinks = [
     icon: Award,
     to: '/certifications',
     color: 'from-amber-500 to-orange-600',
-  },
-  {
-    title: 'Contributions',
-    description: 'Open-source work and community impact.',
-    icon: GitBranch,
-    to: '/contributions',
-    color: 'from-emerald-500 to-green-600',
   },
   {
     title: 'Contact',

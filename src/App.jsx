@@ -10,7 +10,6 @@ import About from './pages/About'
 import Experience from './pages/Experience'
 import Competitions from './pages/Competitions'
 import Certifications from './pages/Certifications'
-import Contributions from './pages/Contributions'
 import Contact from './pages/Contact'
 
 function App() {
@@ -28,7 +27,6 @@ function App() {
             <Route path="/experience" element={<Experience />} />
             <Route path="/competitions" element={<Competitions />} />
             <Route path="/certifications" element={<Certifications />} />
-            <Route path="/contributions" element={<Contributions />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </AnimatePresence>

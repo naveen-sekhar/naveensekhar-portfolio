@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        var redirect = sessionStorage.getItem('spa-redirect');
+        if (redirect) {
+          sessionStorage.removeItem('spa-redirect');
+          history.replaceState(null, '', redirect);
+        }
+      })();
+    </script>
     <meta name="description" content="Naveen Sekhar's cybersecurity and IoT portfolio showcasing experience, education, skills, certifications, and hands-on security interests." />
     <meta name="theme-color" content="#0f1117" />
     <meta name="author" content="Naveen Sekhar" />
