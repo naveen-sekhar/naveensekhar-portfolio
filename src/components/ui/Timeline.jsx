@@ -11,12 +11,11 @@ function TimelineItem({ item, index, isLeft }) {
         delay: index * 0.2,
         ease: "easeOut",
       }}
-      className={`
-        relative flex items-start gap-6
-        md:w-[calc(50%-24px)]
-        ${isLeft ? "md:self-start md:flex-row-reverse md:text-right" : "md:self-end md:flex-row md:text-left"}
-        w-full flex-row text-left
-      `}
+      className={`relative flex items-start gap-6 w-full min-w-0 ml-10 md:ml-0 ${
+        isLeft
+          ? "md:self-start md:flex-row-reverse md:text-right"
+          : "md:self-end md:flex-row md:text-left"
+      }`}
     >
       {/* Card */}
       <motion.div
@@ -26,7 +25,7 @@ function TimelineItem({ item, index, isLeft }) {
           boxShadow: "0 0 24px rgba(59, 130, 246, 0.08)",
         }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="flex-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 transition-all duration-300"
+        className="flex-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-5 transition-all duration-300 min-w-0"
       >
         {/* Duration badge */}
         <span className="inline-block text-xs font-mono text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-lg mb-3">
@@ -40,7 +39,7 @@ function TimelineItem({ item, index, isLeft }) {
         )}
 
         {item.description && (
-          <p className="text-gray-400 text-sm leading-relaxed mb-2">
+          <p className="text-gray-400 text-sm leading-relaxed mb-2 break-words">
             {item.description}
           </p>
         )}
@@ -74,11 +73,7 @@ export default function Timeline({ items = [] }) {
         whileInView={{ scaleY: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 1.2, ease: "easeInOut" }}
-        className="
-          absolute top-0 bottom-0 w-0.5 origin-top
-          bg-gradient-to-b from-blue-500 via-cyan-400 to-sky-500
-          left-[7px] md:left-1/2 md:-translate-x-1/2
-        "
+        className="absolute top-0 bottom-0 w-0.5 origin-top bg-gradient-to-b from-blue-500 via-cyan-400 to-sky-500 left-4 md:left-1/2 md:-translate-x-1/2"
       />
 
       {/* Items container */}
@@ -87,10 +82,7 @@ export default function Timeline({ items = [] }) {
           const isLeft = index % 2 === 0;
 
           return (
-            <div
-              key={item.id ?? index}
-              className="relative flex items-start md:justify-center"
-            >
+            <div key={item.id ?? index} className="relative flex items-start md:justify-center">
               {/* Timeline dot — absolute positioned on the line */}
               <motion.div
                 initial={{ scale: 0 }}
@@ -102,17 +94,11 @@ export default function Timeline({ items = [] }) {
                   damping: 15,
                   delay: index * 0.2,
                 }}
-                className="
-                  absolute z-10 w-4 h-4 rounded-full bg-blue-500
-                  border-4 border-[#0f1117]
-                  left-0 md:left-1/2 md:-translate-x-1/2
-                  top-5
-                  shadow-lg shadow-blue-500/30
-                "
+                className="absolute z-10 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#0f1117] left-4 md:left-1/2 md:-translate-x-1/2 top-5 shadow-lg shadow-blue-500/30"
               />
 
               {/* Mobile spacer for dot */}
-              <div className="w-8 shrink-0 md:hidden" />
+              <div className="w-10 shrink-0 md:hidden" />
 
               {/* Desktop layout: alternate sides */}
               <div className="hidden md:flex w-full">

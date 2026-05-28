@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 import {
   Mail,
   MapPin,
-  GitBranch,
   Code2,
   Link,
   Globe,
 } from 'lucide-react';
+import GitHubIcon from '../components/icons/GitHubIcon';
 import PageTransition from '../components/PageTransition';
 import SectionHeader from '../components/SectionHeader';
 import Card from '../components/ui/Card';
@@ -30,7 +30,7 @@ const itemVariants = {
 };
 
 const socialIconMap = {
-  Github: GitBranch,
+  Github: GitHubIcon,
   Linkedin: Link,
   LeetCode: Code2,
   Email: Mail,
@@ -41,8 +41,8 @@ const contactInfo = [
   { icon: Mail, label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
   { icon: MapPin, label: 'Location', value: profile.location, href: null },
   { icon: Link, label: 'LinkedIn Profile', value: 'linkedin.com/in/naveensekhar6', href: 'https://www.linkedin.com/in/naveensekhar6/' },
-  { icon: GitBranch, label: 'GitHub Profile', value: 'github.com/naveensekhar6', href: 'https://github.com/naveensekhar6' },
-  { icon: Code2, label: 'LeetCode Profile', value: 'leetcode.com/u/naveensekhar6', href: 'https://leetcode.com/u/naveensekhar6/' },
+  { icon: GitHubIcon, label: 'GitHub Profile', value: 'github.com/naveensekhar6', href: 'https://github.com/naveen-sekhar' },
+  { icon: Code2, label: 'LeetCode Profile', value: 'leetcode.com/u/naveensekhar6', href: 'https://leetcode.com/u/naveen-sekhar/' },
 ];
 
 export default function Contact() {

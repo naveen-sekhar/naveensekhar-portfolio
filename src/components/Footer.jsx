@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
-import { Heart, ArrowUp, GitBranch, Link as LinkIcon, Globe, Code2, Mail } from 'lucide-react';
+import { Heart, ArrowUp, Link as LinkIcon, Globe, Code2, Mail } from 'lucide-react';
+import GitHubIcon from './icons/GitHubIcon';
 import { Link } from 'react-router-dom';
 import profile from '../data/profile';
 
-const socialIconMap = { Github: GitBranch, Linkedin: LinkIcon, LeetCode: Code2, Email: Mail, Twitter: Globe };
+const socialIconMap = { Github: GitHubIcon, Linkedin: LinkIcon, LeetCode: Code2, Email: Mail, Twitter: Globe };
 
 const quickLinks = [
   { name: 'Home', path: '/' },
@@ -55,16 +56,7 @@ export default function Footer() {
                 {profile.subtitle}. Building secure systems, thoughtful interfaces,
                 and practical digital experiences.
               </p>
-              <p className="text-gray-500 text-xs flex items-center gap-1.5">
-                Made with{' '}
-                <motion.span
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
-                >
-                  <Heart size={12} className="text-cyan-400 fill-cyan-400" />
-                </motion.span>{' '}
-                by {profile.name}
-              </p>
+              {/* Footer credit removed per request */}
             </motion.div>
 
             {/* Quick Links */}

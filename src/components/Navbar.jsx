@@ -9,12 +9,13 @@ import {
   Briefcase,
   Trophy,
   Award,
-  GitBranch,
   Mail,
+  Code2,
 } from 'lucide-react';
+import GitHubIcon from './icons/GitHubIcon';
 import navigation from '../data/navigation';
 
-const iconMap = { Home, User, Briefcase, Trophy, Award, GitBranch, Mail };
+const iconMap = { Home, User, Briefcase, Trophy, Award, GitHub: GitHubIcon, Mail, Code2 };
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);

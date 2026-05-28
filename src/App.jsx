@@ -13,6 +13,7 @@ import Certifications from './pages/Certifications'
 import ProjectWorks from './pages/ProjectWorks'
 import Responsibilities from './pages/Responsibilities'
 import Contact from './pages/Contact'
+import Skills from './pages/Skills'
 
 function App() {
   const location = useLocation()
@@ -29,6 +30,7 @@ function App() {
             <Route path="/experience" element={<Experience />} />
             <Route path="/competitions" element={<Competitions />} />
             <Route path="/certifications" element={<Certifications />} />
+            <Route path="/skills" element={<Skills />} />
             <Route path="/project-works" element={<ProjectWorks />} />
             <Route path="/responsibilities" element={<Responsibilities />} />
             <Route path="/contact" element={<Contact />} />

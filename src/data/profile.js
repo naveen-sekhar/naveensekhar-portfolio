@@ -10,21 +10,20 @@ const profile = {
   availability: 'Open to internships and security projects',
   resumeUrl: '#',
   socialLinks: [
-    { name: 'GitHub', url: 'https://github.com/naveensekhar6', icon: 'Github' },
+    { name: 'GitHub', url: 'https://github.com/naveen-sekhar', icon: 'Github' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/naveensekhar6/', icon: 'Linkedin' },
-    { name: 'LeetCode', url: 'https://leetcode.com/u/naveensekhar6/', icon: 'LeetCode' },
+    { name: 'LeetCode', url: 'https://leetcode.com/u/naveen-sekhar/', icon: 'LeetCode' },
   ],
   stats: [
-    { label: 'Current Focus', value: 'Cybersecurity' },
-    { label: 'Security Track', value: 'Penetration Testing' },
-    { label: 'Languages', value: 'Tamil, English, Hindi, Japanese' },
-    { label: 'Certifications', value: '5' },
+    { label: 'Languages Known', value: 'Tamil, English, Japanese' },
   ],
   typingTexts: [
-    'Cybersecurity Student',
-    'IoT Explorer',
+    'Cybersecurity',
+    'Internet of Things',
     'Red Teaming Learner',
     'Security Researcher',
+    'Web Development',
+    'Application Development'
   ],
 };
 

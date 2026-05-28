@@ -9,9 +9,9 @@ import {
   Briefcase,
   Trophy,
   Award,
-  GitBranch,
   Mail,
 } from 'lucide-react';
+import GitHubIcon from '../components/icons/GitHubIcon';
 
 import PageTransition from '../components/PageTransition';
 import ParticleBackground from '../components/ParticleBackground';
@@ -82,7 +82,7 @@ const quickLinks = [
   {
     title: 'Project Works',
     description: 'Projects, outcomes, and linked source code.',
-    icon: GitBranch,
+    icon: GitHubIcon,
     to: '/project-works',
     color: 'from-emerald-500 to-teal-600',
   },
@@ -176,30 +176,9 @@ export default function Home() {
                     View My Work
                   </Button>
                 </Link>
-                <a href={profile.resumeUrl} target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="lg" icon={<Download size={18} />}>
-                    Download CV
-                  </Button>
-                </a>
               </motion.div>
 
-              <motion.div
-                variants={heroChild}
-                className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl"
-              >
-                {[
-                  'Red teaming',
-                  'IoT security',
-                  'Linux + databases',
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-4 py-3 text-sm text-gray-300"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </motion.div>
+              {/* Skill chips removed per request */}
             </div>
 
           </motion.div>

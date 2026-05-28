@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Calendar, GitBranch, Link as LinkIcon, Code2 } from 'lucide-react';
+import { MapPin, Mail, Calendar, Link as LinkIcon, Code2 } from 'lucide-react';
+import GitHubIcon from '../components/icons/GitHubIcon';
 
 import PageTransition from '../components/PageTransition';
 import SectionHeader from '../components/SectionHeader';
@@ -52,7 +53,7 @@ const educationItems = education.map((e) => ({
 }));
 
 const socialIconMap = {
-  Github: GitBranch,
+  Github: GitHubIcon,
   Linkedin: LinkIcon,
   LeetCode: Code2,
 };
@@ -69,7 +70,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             title="About Me"
-            subtitle="A little more about my cybersecurity and IoT journey"
+            subtitle="A little more about my journey"
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
@@ -227,54 +228,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* ════════════════════  SKILLS SECTION  ════════════════════ */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <SectionHeader
-            title="Technical Skills"
-            subtitle="Technologies I work with"
-          />
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-40px' }}
-            variants={staggerContainer}
-            className="space-y-12"
-          >
-            {skills.map((category, catIdx) => (
-              <motion.div
-                key={category.name}
-                variants={staggerItem}
-                custom={catIdx}
-              >
-                {/* Category heading */}
-                <motion.h3
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: catIdx * 0.1, duration: 0.4 }}
-                  className="text-xl font-semibold text-white mb-5 flex items-center gap-3"
-                >
-                  <span className="w-8 h-0.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500" />
-                  {category.name}
-                </motion.h3>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {category.skills.map((skill, skillIdx) => (
-                    <SkillBadge
-                      key={skill.name}
-                      name={skill.name}
-                      level={skill.level}
-                      index={skillIdx}
-                    />
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      {/* Skills section moved to its own page */}
 
       {/* ════════════════════  EDUCATION SECTION  ════════════════════ */}
       <section className="relative py-20 px-4">
